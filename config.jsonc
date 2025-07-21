@@ -1,0 +1,42 @@
+{
+	"layer": "top",
+	"output": "HDMI-A-1",
+	"modules-left": ["cpu","memory","disk"],
+	"modules-center": ["clock"],
+	"modules-right": ["pulseaudio","custom/power"],
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon}  {volume}%",
+		"format-muted": "muted",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+	"disk": {
+        "interval": 30,
+        "format": "  {percentage_used}%",
+        "path": "/"
+    },
+    "cpu": {
+        "interval": 15,
+        "format": "  {}%",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 30,
+        "format": "  {}%",
+        "max-length": 10
+    },
+    "clock": {
+        "format": "  {:%A - %B %d, %Y - %R}",
+        "tooltip": false,
+    },
+    "custom/power":{
+        "format": "⏻ ",
+        "tooltip": false,
+        "on-click": "poweroff",
+        "on-click-right": "reboot",
+    }
+}
