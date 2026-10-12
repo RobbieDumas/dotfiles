@@ -1,4 +1,9 @@
 #startup
+
+#nvidia settings
+exec --no-startup-id nvidia-settings -a 'CurrentMetaMode=DPY-2: nvidia-auto-select +1920+0 { ForceFullCompositionPipeline = On }, DPY-0: nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }'
+#nvidia settings end
+
 exec --no-startup-id xrandr --output HDMI-0 --left-of DP-1
 exec --no-startup-id picom -b
 exec --no-startup-id feh --bg-max ~/Pictures/Wallpapers/wallhaven-d8vkq3_1920x1080.png
