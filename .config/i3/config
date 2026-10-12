@@ -1,8 +1,8 @@
 #startup
 exec --no-startup-id xrandr --output HDMI-0 --left-of DP-1
 exec --no-startup-id picom -b
-exec --no-startup-id feh --bg-max ~/Pictures/Wallpapers/glassbeach.jpg
-exec --no-startup-id autotiling
+exec --no-startup-id feh --bg-max ~/Pictures/Wallpapers/wallhaven-d8vkq3_1920x1080.png
+#exec --no-startup-id autotiling
 
 #border
 default_border pixel 0
@@ -35,8 +35,8 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-bindsym $mod+q exec alacritty
-bindsym $mod+d exec flatpak run dev.vencord.Vesktop
+bindsym $mod+q exec kitty
+bindsym $mod+d exec vesktop
 bindsym $mod+z exec qutebrowser
 bindsym $mod+s exec spotify
 bindsym $mod+t exec steam
